@@ -1,0 +1,21 @@
+{
+    "name": "kazuto/php-cs-preset",
+    "description": "PHP Coding Standards Fixer Preset",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kazuto\\PhpCsPreset\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kazuto",
+            "email": "mail@kazuto.de"
+        }
+    ],
+    "require": {
+        "php": "8.*",
+        "friendsofphp/php-cs-fixer": "^3.2"
+    }
+}
