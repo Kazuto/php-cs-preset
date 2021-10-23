@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Kazuto\PhpCsPreset;
 
 use function array_merge;
@@ -10,7 +12,7 @@ class Preset
 {
     public function __invoke(Finder $finder, array $rules = []): Config
     {
-        $rules = array_merge(require __DIR__ . '/../config/rules.php', $rules);
+        $rules = array_merge(require __DIR__.'/../config/rules.php', $rules);
 
         return (new Config())
             ->setFinder($finder)

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     // Alias
     // https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/rules/index.rst#alias
@@ -38,7 +40,7 @@ return [
     // Casing
     // https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/rules/index.rst#casing
     'constant_case'                                    => [
-        'case' => 'upper'
+        'case' => 'lower',
     ],
     'integer_literal_case'                             => true,
     'lowercase_keywords'                               => true,
@@ -264,8 +266,8 @@ return [
             'property-read'  => 'property',
             'property-write' => 'property',
             'type'           => 'var',
-            'link'           => 'see'
-        ]
+            'link'           => 'see',
+        ],
     ],
     'phpdoc_no_empty_return'                           => true,
     'phpdoc_no_package'                                => true,
@@ -278,8 +280,8 @@ return [
             '$self'   => 'self',
             '@self'   => 'self',
             '$static' => 'static',
-            '@static' => 'static'
-        ]
+            '@static' => 'static',
+        ],
     ],
     'phpdoc_scalar'                                    => true,
     'phpdoc_separation'                                => true,
@@ -293,7 +295,7 @@ return [
     'phpdoc_types'                                     => true,
     'phpdoc_types_order'                               => [
         'sort_algorithm'  => 'none',
-        'null_adjustment' => 'always_last'
+        'null_adjustment' => 'always_last',
     ],
     'phpdoc_var_annotation_correct_order'              => true,
     'phpdoc_var_without_name'                          => true,
@@ -342,8 +344,8 @@ return [
             'declare',
             'return',
             'throw',
-            'try'
-        ]
+            'try',
+        ],
     ],
     'compact_nullable_typehint'                        => true,
     'heredoc_indentation'                              => ['indentation' => 'start_plus_one'],
@@ -366,6 +368,5 @@ return [
     'no_whitespace_in_blank_line'                      => true,
     'single_blank_line_at_eof'                         => true,
     'types_spaces'                                     => ['space' => 'none'],
-
 
 ];
