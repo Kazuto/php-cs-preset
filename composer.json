@@ -1,21 +1,28 @@
 {
-    "name": "kazuto/php-cs-preset",
-    "description": "PHP Coding Standards Fixer Preset",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Kazuto\\PhpCsPreset\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Kazuto",
-            "email": "mail@kazuto.de"
-        }
-    ],
-    "require": {
-        "php": "8.*",
-        "friendsofphp/php-cs-fixer": "^3.2"
+  "name": "kazuto/php-cs-preset",
+  "description": "PHP Coding Standards Fixer Preset",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Kazuto\\PhpCsPreset\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Kazuto",
+      "email": "mail@kazuto.de"
+    }
+  ],
+  "require": {
+    "php": "8.*",
+    "friendsofphp/php-cs-fixer": "^3.2"
+  },
+  "scripts": {
+    "fix": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php vendor/bin/php-cs-fixer fix --diff --config=.php-cs-fixer.dist.php --allow-risky=yes",
+      "@composer dump-autoload"
+    ]
+  }
 }
